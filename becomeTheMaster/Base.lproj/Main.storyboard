@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hf0-wh-RK4">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--homeVC-->
+        <scene sceneID="r9g-xs-n7p">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="homeVC" id="bla-a3-Xid" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="x1P-5x-1si"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ml-5i-Dzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669" y="-1274"/>
+        </scene>
+        <!--contractVC-->
+        <scene sceneID="SjP-1p-n2I">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="contractVC" storyboardName="Contract" referencedIdentifier="contractVC" id="Bhq-LK-aJH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fbd-ja-mNf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hrb-rT-L95" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="680" y="-1186"/>
+        </scene>
+        <!--followVC-->
+        <scene sceneID="T08-mj-uKg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Follow" referencedIdentifier="followVC" id="kUw-pt-7Pq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hPR-ia-DuO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nlO-Bl-Kts" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="-1227"/>
+        </scene>
+        <!--messageVC-->
+        <scene sceneID="a6V-Xn-7xS">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="messageVC" storyboardName="Message" referencedIdentifier="messageVC" id="yWK-75-1u8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="E6b-GB-sXo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dyC-hU-0cp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682" y="-1149"/>
+        </scene>
+        <!--settingVC-->
+        <scene sceneID="tRr-po-H2G">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Setting" referencedIdentifier="settingVC" id="X7l-7V-xLV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="e0p-IP-Dcn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3m-84-uge" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="-1092"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="dla-kH-8kR">
+            <objects>
+                <tabBarController storyboardIdentifier="MainStoryBoard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hf0-wh-RK4" customClass="MainTabBarController" customModule="becomeTheMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DZJ-eO-Fy1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.25806331634521484" green="0.3404441773891449" blue="0.53337138891220093" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.25806331630000001" green="0.34044417739999999" blue="0.53337138890000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="mainTabBar" destination="DZJ-eO-Fy1" id="ShP-WZ-JeT"/>
+                        <segue destination="bla-a3-Xid" kind="relationship" relationship="viewControllers" id="diF-4R-1LA"/>
+                        <segue destination="kUw-pt-7Pq" kind="relationship" relationship="viewControllers" id="B3z-CM-8DT"/>
+                        <segue destination="Bhq-LK-aJH" kind="relationship" relationship="viewControllers" id="yUR-9k-tzJ"/>
+                        <segue destination="yWK-75-1u8" kind="relationship" relationship="viewControllers" id="PJY-EP-uvY"/>
+                        <segue destination="X7l-7V-xLV" kind="relationship" relationship="viewControllers" id="RC2-iz-buN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frZ-la-4pE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="-1274"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.25806331630000001" green="0.34044417739999999" blue="0.53337138890000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+</document>

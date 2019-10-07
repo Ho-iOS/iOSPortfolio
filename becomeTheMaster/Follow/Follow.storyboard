@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QGO-ph-Mif">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="F5G-xp-bFs">
+            <objects>
+                <navigationController storyboardIdentifier="followVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QGO-ph-Mif" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="1PB-qb-hrN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SDMiSaeng" family="Sandoll MiSaeng" pointSize="30"/>
+                            <color key="textColor" red="0.25806331630000001" green="0.34044417739999999" blue="0.53337138890000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="maR-mj-PxE" kind="relationship" relationship="rootViewController" id="WD3-MZ-L4b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3QW-Ra-xFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-955" y="121"/>
+        </scene>
+        <!--Follow-->
+        <scene sceneID="Vxi-Ut-5t8">
+            <objects>
+                <tableViewController id="maR-mj-PxE" customClass="FollowTableView" customModule="becomeTheMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xYv-Jn-nf0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="followCell" rowHeight="80" id="cUE-uM-Kmd" customClass="FollowTableCell" customModule="becomeTheMaster" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cUE-uM-Kmd" id="T2a-yi-11J">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pAK-pZ-jFe" customClass="CustomImageView" customModule="becomeTheMaster" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="12" width="55.5" height="55.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="pAK-pZ-jFe" secondAttribute="height" multiplier="1:1" id="zZm-EN-L38"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fzf-0C-JUl">
+                                            <rect key="frame" x="87.5" y="10" width="306.5" height="59.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyv-Yv-tIv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="306.5" height="37.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFU-L2-85v">
+                                                    <rect key="frame" x="0.0" y="22.5" width="306.5" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pAK-pZ-jFe" firstAttribute="leading" secondItem="T2a-yi-11J" secondAttribute="leading" constant="20" id="7Lf-jx-mOc"/>
+                                        <constraint firstAttribute="bottom" secondItem="pAK-pZ-jFe" secondAttribute="bottom" constant="12" id="DZM-0a-XyX"/>
+                                        <constraint firstAttribute="bottom" secondItem="Fzf-0C-JUl" secondAttribute="bottom" constant="10" id="PZS-ej-kzf"/>
+                                        <constraint firstItem="Fzf-0C-JUl" firstAttribute="top" secondItem="T2a-yi-11J" secondAttribute="top" constant="10" id="PfE-Bh-Skd"/>
+                                        <constraint firstItem="pAK-pZ-jFe" firstAttribute="top" secondItem="T2a-yi-11J" secondAttribute="top" constant="12" id="RRh-Ao-7Pu"/>
+                                        <constraint firstItem="Fzf-0C-JUl" firstAttribute="leading" secondItem="pAK-pZ-jFe" secondAttribute="trailing" constant="12" id="WuT-kz-tMR"/>
+                                        <constraint firstAttribute="trailing" secondItem="Fzf-0C-JUl" secondAttribute="trailing" constant="20" id="ZZY-cW-kHh"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="followUserField" destination="TFU-L2-85v" id="oob-ii-lNX"/>
+                                    <outlet property="followUserImageView" destination="pAK-pZ-jFe" id="2Nd-ki-a99"/>
+                                    <outlet property="followUserName" destination="qyv-Yv-tIv" id="XPf-Q8-EQb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="maR-mj-PxE" id="UnP-00-zD1"/>
+                            <outlet property="delegate" destination="maR-mj-PxE" id="j5X-93-5UO"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" image="follow.png" selectedImage="follow.png" id="CEQ-N7-GWH">
+                        <color key="badgeColor" red="0.25806331630000001" green="0.34044417739999999" blue="0.53337138890000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Follow" id="vpK-PU-Y2O"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNq-Jc-dyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252.17391304347828" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="follow.png" width="21" height="21"/>
+    </resources>
+    <color key="tintColor" red="0.25806331630000001" green="0.34044417739999999" blue="0.53337138890000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+</document>
