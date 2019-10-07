@@ -28,6 +28,8 @@ class MyPageViewController: UIViewController, UINavigationControllerDelegate {
     var user: User?
     var profileImage: UIImage?
     
+    let loginStoryBoard = UIStoryboard(name: "Login", bundle: nil)
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -90,8 +92,6 @@ class MyPageViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @objc func popUpLocationView(_ sender: UIGestureRecognizer) {
-        
-        let loginStoryBoard = UIStoryboard(name: "Login", bundle: nil)
         let locationVC = loginStoryBoard.instantiateViewController(withIdentifier: "MentorSecond") as! CityController
         locationVC.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(saveValue(_:)))
 
@@ -99,7 +99,6 @@ class MyPageViewController: UIViewController, UINavigationControllerDelegate {
     }
 
     @objc func popUpFieldView(_ sender: UIGestureRecognizer) {
-        let loginStoryBoard = UIStoryboard(name: "Login", bundle: nil)
         let fieldVC = loginStoryBoard.instantiateViewController(withIdentifier: "MentorThird") as! FieldController
         fieldVC.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(saveValue(_:)))
 
@@ -107,7 +106,6 @@ class MyPageViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @objc func popUpTimeView(_ sender: UIGestureRecognizer) {
-        let loginStoryBoard = UIStoryboard(name: "Login", bundle: nil)
         let timeVC = loginStoryBoard.instantiateViewController(withIdentifier: "MentorFourth") as! DayTimeController
         timeVC.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(saveValue(_:)))
         
@@ -120,14 +118,20 @@ class MyPageViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @IBAction func LogoutButtonPressed(_ sender: UIBarButtonItem) {
-        do {
-            try Auth.auth().signOut()
-            if Auth.auth().currentUser == nil {
-                presentLoginController()
+        let alertController = UIAlertController(title: "Logout", message: "로그아웃 하시겠습니까??", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
+            do {
+                try Auth.auth().signOut()
+                if Auth.auth().currentUser == nil {
+                    presentLoginController()
+                }
+            } catch let err {
+                print("Failed to sign out:", err)
             }
-        } catch let err {
-            print("Failed to sign out:", err)
-        }
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in
+
+        }))
     }
 
     private func presentLoginController() {
